@@ -32,35 +32,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-    <groupId>org.modelmapper</groupId>
-    <artifactId>modelmapper</artifactId>
-    <version>0.7.7</version>
-</dependency>
-		<dependency>
-			<groupId>com.jayway.jsonpath</groupId>
-			<artifactId>json-path-assert</artifactId>
-			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.hamcrest</groupId>
-					<artifactId>hamcrest-core</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-api</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.derby</groupId>
-			<artifactId>derby</artifactId>
-<!-- 			<version>${derby.version}</version> -->
-		</dependency>
+
 
 	</dependencies>
 	<build>
@@ -69,13 +41,13 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!--
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.4.11</version>
 				<configuration>
 					<imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
-					<!-- <dockerDirectory>src/main/docker</dockerDirectory> -->
 					<dockerDirectory>../</dockerDirectory>
 					<resources>
 						<resource>
@@ -86,7 +58,7 @@
 					</resources>
 				</configuration>
 			</plugin>
-
+			-->
 		</plugins>
 	</build>
 
