@@ -2,9 +2,14 @@ package es.whinedo.pilots.springboot_docker.simple.controller;
 
 import es.whinedo.pilots.springboot_docker.simple.model.Customer;
 import es.whinedo.pilots.springboot_docker.simple.repository.CustomerRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.embedded.LocalServerPort;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.List;
 
 @RestController
